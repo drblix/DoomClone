@@ -6,30 +6,59 @@ public class Stormtrooper : MonoBehaviour
 {
     [SerializeField] private Transform _player;
     [SerializeField] private SpriteRenderer _spriteRenderer;
+    [SerializeField] private Animator animator;
 
     [SerializeField] private Sprite[] sprites;
 
-    private void Update() 
+    private bool moving = false;
+
+    // Late update so animator doesn't override idle sprite changes
+    private void LateUpdate()
     {
+        enabled = !(animator.GetBool("Dead_1") || animator.GetBool("Dead_2"));
+        moving = animator.GetBool("Moving");
+
         PlayerMovement.Facing face = PlayerMovement.GetFacing(_player, transform);
 
-        switch (face)
+        if (!moving)
         {
-            case PlayerMovement.Facing.Front:
-                _spriteRenderer.sprite = sprites[0];
-                break;
-            case PlayerMovement.Facing.Behind:
-                _spriteRenderer.sprite = sprites[1];
-                break;
-            case PlayerMovement.Facing.Left:
-                _spriteRenderer.sprite = sprites[2];
-                break;
-            case PlayerMovement.Facing.Right:
-                _spriteRenderer.sprite = sprites[2];
-                _spriteRenderer.flipX = true;
-                break;
+            switch (face)
+            {
+                case PlayerMovement.Facing.Front:
+                    _spriteRenderer.sprite = sprites[0];
+                    break;
+                case PlayerMovement.Facing.Behind:
+                    _spriteRenderer.sprite = sprites[1];
+                    break;
+                case PlayerMovement.Facing.Left:
+                    _spriteRenderer.sprite = sprites[2];
+                    break;
+                case PlayerMovement.Facing.Right:
+                    _spriteRenderer.sprite = sprites[2];
+                    break;
+            }
         }
 
+        SetAnimatorBools(face);
+    }
+
+    private void Die()
+    {
+        if (animator.GetBool("Dead_1") || animator.GetBool("Dead_2")) { return; }
+
+        if (Random.Range(1, 3) == 1)
+            animator.SetBool("Dead_1", true);
+        else
+            animator.SetBool("Dead_2", true);
+
+        GetComponentInChildren<BoxCollider>().enabled = false;
+    }
+
+    private void SetAnimatorBools(PlayerMovement.Facing face)
+    {
+        animator.SetBool("Front", face.Equals(PlayerMovement.Facing.Front));
+        animator.SetBool("Behind", face.Equals(PlayerMovement.Facing.Behind));
+        animator.SetBool("Side", face.Equals(PlayerMovement.Facing.Left) || face.Equals(PlayerMovement.Facing.Right));
         _spriteRenderer.flipX = face.Equals(PlayerMovement.Facing.Right);
     }
 }

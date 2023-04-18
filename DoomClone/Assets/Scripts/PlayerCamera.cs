@@ -55,9 +55,7 @@ public class PlayerCamera : MonoBehaviour
         {
             bobTime = 0f;
             mainCam.localPosition = Vector3.Lerp(mainCam.localPosition, Vector3.zero, Time.deltaTime * _bobIntensity);
-        }
-        
-        // mainCam.localPosition = new Vector3(0f, headY, 0f);
+        }       
     }
 
     private void HeadTilt()
