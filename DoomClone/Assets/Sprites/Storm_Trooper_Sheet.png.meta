@@ -1,0 +1,1192 @@
+fileFormatVersion: 2
+guid: dcfec44491c76fc4a8d230a5fb10e5c7
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Storm_Trooper_Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 208
+        width: 29
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2345c0cf4ef7af4f99d7302e56ab901
+      internalID: 125044940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Storm_Trooper_Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 208
+        width: 29
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecada0ef08bf8a641958d23d1df445b3
+      internalID: -1784214670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Storm_Trooper_Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 208
+        width: 28
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 806db9fdb3ba31f4a8adf212631db47e
+      internalID: -2017437521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Storm_Trooper_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 208
+        width: 29
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 218e509eff9049c49a0ffb98bbe50d9f
+      internalID: 902823523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Storm_Trooper_Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 208
+        width: 30
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd7f4a168b032e144894cf106341043a
+      internalID: 57776182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Storm_Trooper_Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 208
+        width: 30
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 706519a0a3b9a1141b2d9c99cf1ea2f7
+      internalID: -178873776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Storm_Trooper_Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 208
+        width: 42
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b730baf4ee72e614a95c02ea478fc894
+      internalID: 681512111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Storm_Trooper_Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 208
+        width: 40
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9d80972c5346454c91325d6ec99a893
+      internalID: 1949449053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Storm_Trooper_Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 208
+        width: 41
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e939359671fc6f649a366ff369b3a140
+      internalID: -1046237198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Storm_Trooper_Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 208
+        width: 40
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89034ebead214364880a860d3441e0f8
+      internalID: 1788754057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Storm_Trooper_Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 208
+        width: 45
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4843b42dc488a8b40adac5fc05cc52fc
+      internalID: 1653918600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Storm_Trooper_Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 208
+        width: 47
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4fdcd48f3934024dbccc42e1a79cea5
+      internalID: 934244488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Storm_Trooper_Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 140
+        width: 28
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 755dc4241236db54185e81b88b19ab4e
+      internalID: 2012944351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Storm_Trooper_Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 140
+        width: 28
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e819e5b1895f6044d90c2181bf986e86
+      internalID: 198934708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Storm_Trooper_Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 140
+        width: 28
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ee9ab1bfe633634399cbdca6d481c67
+      internalID: -1059866679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Storm_Trooper_Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 140
+        width: 28
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76a8acd2c1f40f240b99bebfa37ab388
+      internalID: -1512167819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Storm_Trooper_Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 140
+        width: 29
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07c91a69c2c14204fa67e9df447a13f6
+      internalID: -666338141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Storm_Trooper_Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 140
+        width: 28
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51b0ebf3db9ace745927f8d59409c6df
+      internalID: -166103460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Storm_Trooper_Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 140
+        width: 30
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccbc5752742180045a3b75c977c3b42b
+      internalID: -1242838459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Storm_Trooper_Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 140
+        width: 30
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cd0bbd3fde3bd94f88c02b874ac6f7b
+      internalID: -1755550989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Storm_Trooper_Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 140
+        width: 31
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3460e6b41e07d1d449869be1d7eadb01
+      internalID: -225156497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Storm_Trooper_Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 140
+        width: 42
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ec2be2298808284b982a09273cb177b
+      internalID: 1259931774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Storm_Trooper_Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 140
+        width: 44
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11d00a6a81bf45949a5a279a8c3208ba
+      internalID: 1356992832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Storm_Trooper_Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 140
+        width: 44
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e6865c8345440048a6ba8830862abe0
+      internalID: -1857410643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Storm_Trooper_Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 140
+        width: 44
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cae7f3517566d9c4b8d2c1793230f915
+      internalID: 1297506231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Storm_Trooper_Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 72
+        width: 39
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed9d465bd7735c74e885e326d58bf99e
+      internalID: 936423136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Storm_Trooper_Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 72
+        width: 50
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f760b7bdbec87eb46a485c7dc0af85d6
+      internalID: 924754442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Storm_Trooper_Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 72
+        width: 49
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd79a0898a95e81439b0cd72540f2f51
+      internalID: 1410670013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Storm_Trooper_Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 72
+        width: 36
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1e239a83230ca14583d764f512a787f
+      internalID: 1385800766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Storm_Trooper_Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 72
+        width: 43
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b2313e948edd2a4c9c0dd7c9b9cb97d
+      internalID: 259183574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Storm_Trooper_Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 72
+        width: 46
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f25570bf693c25a479404ffc22ce0ff5
+      internalID: -1358813300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Storm_Trooper_Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 72
+        width: 27
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a05a4ab3439f9f458d2b3fc2f1f307c
+      internalID: 1137482689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Storm_Trooper_Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 72
+        width: 38
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d8ec02d79256f7448071a2bfafec2ce
+      internalID: 1224219705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Storm_Trooper_Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 72
+        width: 38
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a61a77ac4210134f9beeaa1920d98e4
+      internalID: -1587806493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Storm_Trooper_Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 72
+        width: 26
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58aa6d4c7b9871a44abd9c172c08bd10
+      internalID: -1125484592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Storm_Trooper_Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 72
+        width: 25
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3638954ebee5bb844b1a7259832585b0
+      internalID: 2261008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Storm_Trooper_Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 72
+        width: 28
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d57e003355ef284f99b313be6266584
+      internalID: -700208994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Storm_Trooper_Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4
+        width: 33
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1517a0fe377fba4d94dd74343c1b8eb
+      internalID: 2002345850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Storm_Trooper_Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 4
+        width: 36
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 848d2f4973173fb4a9b5f2fb508c75df
+      internalID: 1699436784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Storm_Trooper_Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 4
+        width: 39
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70de35fa7d49ff040b44a2931a7cb524
+      internalID: 717004445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Storm_Trooper_Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 4
+        width: 32
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48e1d8d24fc00994a820c7aa3a884a2c
+      internalID: -965386015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Storm_Trooper_Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 4
+        width: 35
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e28f8307fe072ba41ba40aa04d0bba8e
+      internalID: 1808720272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Storm_Trooper_Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 4
+        width: 26
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6220cbad080f9a45817290e809df50e
+      internalID: -112338369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Storm_Trooper_Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 4
+        width: 25
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eae21acb2e692a84f80173f05f632076
+      internalID: -2054166182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Storm_Trooper_Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 4
+        width: 29
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b055accbb9b30c442ad79cd30e69c60c
+      internalID: -1028754674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Storm_Trooper_Sheet_51
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 4
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78337fb2c79f49540ba68b5a19dd2777
+      internalID: -1175401378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Storm_Trooper_Sheet_55
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 4
+        width: 45
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2b282a5e314f2c478176d0e8118ee3d
+      internalID: -1384110332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Storm_Trooper_Sheet_60
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 4
+        width: 44
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faf3089f420437b4987d70ff79d4aeaf
+      internalID: 630257917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Storm_Trooper_Sheet_26: 924754442
+      Storm_Trooper_Sheet_45: -989677133
+      Storm_Trooper_Sheet_5: -178873776
+      Storm_Trooper_Sheet_2: -2017437521
+      Storm_Trooper_Sheet_12: 2012944351
+      Storm_Trooper_Sheet_54: -1886279012
+      Storm_Trooper_Sheet_15: -1512167819
+      Storm_Trooper_Sheet_30: -1358813300
+      Storm_Trooper_Sheet_0: 125044940
+      Storm_Trooper_Sheet_34: -1125484592
+      Storm_Trooper_Sheet_29: 259183574
+      Storm_Trooper_Sheet_19: -1755550989
+      Storm_Trooper_Sheet_38: 1699436784
+      Storm_Trooper_Sheet_11: 934244488
+      Storm_Trooper_Sheet_17: -166103460
+      Storm_Trooper_Sheet_49: 782350928
+      Storm_Trooper_Sheet_35: 2261008
+      Storm_Trooper_Sheet_8: -1046237198
+      Storm_Trooper_Sheet_18: -1242838459
+      Storm_Trooper_Sheet_23: -1857410643
+      Storm_Trooper_Sheet_37: 2002345850
+      Storm_Trooper_Sheet_56: 617431597
+      Storm_Trooper_Sheet_6: 681512111
+      Storm_Trooper_Sheet_31: 1137482689
+      Storm_Trooper_Sheet_41: 1808720272
+      Storm_Trooper_Sheet_14: -1059866679
+      Storm_Trooper_Sheet_10: 1653918600
+      Storm_Trooper_Sheet_32: 1224219705
+      Storm_Trooper_Sheet_42: -112338369
+      Storm_Trooper_Sheet_25: 936423136
+      Storm_Trooper_Sheet_48: -1784567491
+      Storm_Trooper_Sheet_13: 198934708
+      Storm_Trooper_Sheet_40: -965386015
+      Storm_Trooper_Sheet_28: 1385800766
+      Storm_Trooper_Sheet_60: 630257917
+      Storm_Trooper_Sheet_44: -1028754674
+      Storm_Trooper_Sheet_52: -851846041
+      Storm_Trooper_Sheet_47: 2077209856
+      Storm_Trooper_Sheet_59: 1089969995
+      Storm_Trooper_Sheet_1: -1784214670
+      Storm_Trooper_Sheet_20: -225156497
+      Storm_Trooper_Sheet_24: 1297506231
+      Storm_Trooper_Sheet_51: -1175401378
+      Storm_Trooper_Sheet_22: 1356992832
+      Storm_Trooper_Sheet_21: 1259931774
+      Storm_Trooper_Sheet_33: -1587806493
+      Storm_Trooper_Sheet_58: 492350227
+      Storm_Trooper_Sheet_55: -1384110332
+      Storm_Trooper_Sheet_4: 57776182
+      Storm_Trooper_Sheet_39: 717004445
+      Storm_Trooper_Sheet_46: -2133741715
+      Storm_Trooper_Sheet_7: 1949449053
+      Storm_Trooper_Sheet_43: -2054166182
+      Storm_Trooper_Sheet_3: 902823523
+      Storm_Trooper_Sheet_53: 1055173397
+      Storm_Trooper_Sheet_50: 719888003
+      Storm_Trooper_Sheet_57: 329127766
+      Storm_Trooper_Sheet_27: 1410670013
+      Storm_Trooper_Sheet_16: -666338141
+      Storm_Trooper_Sheet_9: 1788754057
+      Storm_Trooper_Sheet_36: -700208994
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

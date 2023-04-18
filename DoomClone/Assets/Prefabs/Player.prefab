@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 3470073973392771846}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -149,6 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edce14a91b0a1cb4ea6dbccaa608377a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _movementSpeed: 10
 --- !u!114 &3470073973392771846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,6 +162,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0221bc4f5c265944fb31dd7a7149c55d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainCam: {fileID: 0}
+  _mouseSensitivity: 50
+  _tiltSpeed: 5
+  _tiltIntensity: 1
+  _bobIntensity: 0.1
+  _bobFrequency: 0.1
 --- !u!1 &1204613377175484195
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,11 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(CharacterController))]
 public class PlayerCamera : MonoBehaviour
 {   
+    private PlayerMovement _playerMovement;
     private CharacterController _characterController;
+
     [SerializeField] private Transform mainCam;
+
     [SerializeField] private float _mouseSensitivity = 50f;
+
+    [SerializeField] private float _tiltSpeed = 5f;
+    [SerializeField] private float _tiltIntensity = 1f;
+
+    [Header("Head Bob Settings")]
     [SerializeField] private float _bobIntensity = .1f;
     [SerializeField] private float _bobFrequency = .1f;
 
@@ -15,6 +24,7 @@ public class PlayerCamera : MonoBehaviour
     private void Awake()
     {
         _characterController = GetComponent<CharacterController>();
+        _playerMovement = GetComponent<PlayerMovement>();
         Cursor.lockState = CursorLockMode.Locked;
     }
 
@@ -22,6 +32,7 @@ public class PlayerCamera : MonoBehaviour
     {
         PlayerRotation();
         HeadBob();
+        HeadTilt();
     }
     
     private void PlayerRotation()
@@ -34,16 +45,32 @@ public class PlayerCamera : MonoBehaviour
     {
         float headY = 0f;
 
-        if (IsMoving())
+        if (_playerMovement.IsMoving())
         {
             bobTime += Time.deltaTime;
             headY = Mathf.Sin(bobTime / _bobFrequency) * _bobIntensity;
+            mainCam.localPosition = new Vector3(0f, headY, 0f);
         }
         else
+        {
             bobTime = 0f;
+            mainCam.localPosition = Vector3.Lerp(mainCam.localPosition, Vector3.zero, Time.deltaTime * _bobIntensity);
+        }
         
-        mainCam.localPosition = new Vector3(0f, headY, 0f);
+        // mainCam.localPosition = new Vector3(0f, headY, 0f);
     }
 
-    private bool IsMoving() => _characterController.velocity.sqrMagnitude > .01f;
+    private void HeadTilt()
+    {
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        float speed = Time.deltaTime * _tiltSpeed;
+
+        if (horizontal != 0)
+        {
+            Quaternion to = Quaternion.Euler(Vector3.forward * _tiltIntensity * -horizontal);
+            mainCam.localRotation = Quaternion.Lerp(mainCam.localRotation, to, speed);
+        }
+        else
+            mainCam.localRotation = Quaternion.Lerp(mainCam.localRotation, Quaternion.Euler(Vector3.zero), speed);
+    }
 }
