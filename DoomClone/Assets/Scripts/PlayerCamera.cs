@@ -16,16 +16,20 @@ public class PlayerCamera : MonoBehaviour
     [SerializeField] private float _tiltIntensity = 1f;
 
     [Header("Head Bob Settings")]
-    [SerializeField] private float _bobIntensity = .1f;
+    [SerializeField] private float _bobAmplitude = .1f;
     [SerializeField] private float _bobFrequency = .1f;
+    [SerializeField] private float _bobSmoothing = 1f;
 
     private float bobTime = 0f;
+
+    private Vector3 _startingPos;
 
     private void Awake()
     {
         _characterController = GetComponent<CharacterController>();
         _playerMovement = GetComponent<PlayerMovement>();
         Cursor.lockState = CursorLockMode.Locked;
+        _startingPos = mainCam.localPosition;
     }
 
     private void Update() 
@@ -42,20 +46,23 @@ public class PlayerCamera : MonoBehaviour
     }
 
     private void HeadBob()
-    {
+    {   
+        Vector3 goalPos;
         float headY = 0f;
 
         if (_playerMovement.IsMoving())
         {
+            headY = Mathf.Sin(bobTime / _bobFrequency) * _bobAmplitude;
+            goalPos = new Vector3(0f, headY, 0f);
             bobTime += Time.deltaTime;
-            headY = Mathf.Sin(bobTime / _bobFrequency) * _bobIntensity;
-            mainCam.localPosition = new Vector3(0f, headY, 0f);
         }
         else
         {
             bobTime = 0f;
-            mainCam.localPosition = Vector3.Lerp(mainCam.localPosition, Vector3.zero, Time.deltaTime * _bobIntensity);
-        }       
+            goalPos = _startingPos;
+        }
+        
+        mainCam.localPosition = Vector3.Lerp(mainCam.localPosition, goalPos, _bobSmoothing);
     }
 
     private void HeadTilt()
