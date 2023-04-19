@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 public class BlasterBolt : MonoBehaviour
@@ -13,11 +12,18 @@ public class BlasterBolt : MonoBehaviour
     {
         if (!_started) { return; }
 
+        // If not done, keeping moving bolt towards goal
         if (!_done)
             transform.position = Vector3.MoveTowards(transform.position, _goal, _speed * Time.deltaTime);
         
+        // If reached destination and not done
         if ((_goal - transform.position).sqrMagnitude < .01f && !_done)
         {
+            // Disable all children
+            foreach (Transform child in transform)
+                child.gameObject.SetActive(false);
+
+            // enable explosion sprite; destroy game object after animation completes
             _explosion.SetActive(true);
             Destroy(gameObject, .7f);
             _done = true;
@@ -26,6 +32,7 @@ public class BlasterBolt : MonoBehaviour
 
     public void BeginPath(Vector3 goal)
     {
+        // Starting method
         this._goal = goal;
         _started = true;
     }

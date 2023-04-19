@@ -32,7 +32,7 @@ public class PlayerAttack : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0) & _fireTimer > _fireRate)
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) && _fireTimer > _fireRate)
         {
             // playerShoot.Invoke();
             _fireTimer = 0f;
@@ -47,15 +47,9 @@ public class PlayerAttack : MonoBehaviour
     {
         if (_currentWeapon.ammo <= 0) { return; }
 
-        Debug.Log("BANG");
         _gunSource.clip = _currentWeapon.sound;
         _gunSource.Play();
         _gunAnimator.SetTrigger("Shoot");
-        // 0, 1.607, 0
-        if (Physics.BoxCast(_mainCam.position, new Vector3(2f, 10f, 1f), _mainCam.forward, out RaycastHit info2, Quaternion.Euler(0f, _mainCam.eulerAngles.y, 0f), 15f))
-        {
-            Debug.Log(info2.collider.name);
-        }
 
         if (Physics.Raycast(_mainCam.position, _mainCam.forward, out RaycastHit info, 100f))
         {
@@ -63,7 +57,10 @@ public class PlayerAttack : MonoBehaviour
             {
                 if (info.collider.CompareTag("Enemy"))
                 {
-                    // damage enemy
+                    EnemyHealth health = info.collider.transform.parent.GetComponent<EnemyHealth>();
+                    Debug.Log($"Hit {health.transform.name}");
+
+                    health.Damage(_currentWeapon.damage);
                 }
 
                 GameObject bolt = Instantiate(_blasterBolt, _boltSpawn.position, Quaternion.Euler(Vector3.up * _mainCam.eulerAngles.y));

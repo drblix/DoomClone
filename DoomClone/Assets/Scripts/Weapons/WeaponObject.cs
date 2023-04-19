@@ -10,4 +10,5 @@ public class WeaponObject : ScriptableObject
     public float fireRate;
     public int maxAmmo;
     public int ammo;
+    public int damage;
 }

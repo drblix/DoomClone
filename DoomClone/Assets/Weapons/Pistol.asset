@@ -18,3 +18,4 @@ MonoBehaviour:
   fireRate: 0.35
   maxAmmo: 50
   ammo: 50
+  damage: 1

@@ -42,18 +42,6 @@ public class Stormtrooper : MonoBehaviour
         SetAnimatorBools(face);
     }
 
-    private void Die()
-    {
-        if (animator.GetBool("Dead_1") || animator.GetBool("Dead_2")) { return; }
-
-        if (Random.Range(1, 3) == 1)
-            animator.SetBool("Dead_1", true);
-        else
-            animator.SetBool("Dead_2", true);
-
-        GetComponentInChildren<BoxCollider>().enabled = false;
-    }
-
     private void SetAnimatorBools(PlayerMovement.Facing face)
     {
         animator.SetBool("Front", face.Equals(PlayerMovement.Facing.Front));
@@ -61,4 +49,6 @@ public class Stormtrooper : MonoBehaviour
         animator.SetBool("Side", face.Equals(PlayerMovement.Facing.Left) || face.Equals(PlayerMovement.Facing.Right));
         _spriteRenderer.flipX = face.Equals(PlayerMovement.Facing.Right);
     }
+
+    private void DisableEnemy() => enabled = false;
 }
