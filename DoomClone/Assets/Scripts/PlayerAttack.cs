@@ -32,11 +32,15 @@ public class PlayerAttack : MonoBehaviour
 
     private void Update()
     {
-        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) && _fireTimer > _fireRate)
+        if (_currentWeapon.fullAuto)
         {
-            // playerShoot.Invoke();
-            _fireTimer = 0f;
-            Shoot();
+            if (Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0) && _fireTimer > _fireRate)
+                Shoot();
+        }
+        else
+        {
+            if ((Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) && _fireTimer > _fireRate)
+                Shoot();
         }
 
         ChangeWeaponInput();
@@ -46,6 +50,7 @@ public class PlayerAttack : MonoBehaviour
     private void Shoot()
     {
         if (_currentWeapon.ammo <= 0) { return; }
+        _fireTimer = 0f;
 
         _gunSource.clip = _currentWeapon.sound;
         _gunSource.Play();
