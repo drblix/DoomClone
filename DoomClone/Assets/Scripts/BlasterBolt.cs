@@ -30,10 +30,11 @@ public class BlasterBolt : MonoBehaviour
         }
     }
 
-    public void BeginPath(Vector3 goal)
+    public void BeginPath(Vector3 goal, float speed)
     {
         // Starting method
         this._goal = goal;
+        this._speed = speed;
         _started = true;
     }
 }

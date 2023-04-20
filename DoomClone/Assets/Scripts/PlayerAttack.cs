@@ -69,7 +69,7 @@ public class PlayerAttack : MonoBehaviour
                 }
 
                 GameObject bolt = Instantiate(_blasterBolt, _boltSpawn.position, Quaternion.Euler(Vector3.up * _mainCam.eulerAngles.y));
-                bolt.GetComponent<BlasterBolt>().BeginPath(info.point);
+                bolt.GetComponent<BlasterBolt>().BeginPath(info.point, 80f);
             }
         }
 
