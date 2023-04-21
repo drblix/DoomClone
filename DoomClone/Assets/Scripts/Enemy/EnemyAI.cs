@@ -11,15 +11,38 @@ using UnityEngine.AI;
 public class EnemyAI : MonoBehaviour
 {
     [SerializeField] private Transform _player, _boltSpawn;
+    [SerializeField] private SpriteRenderer _muzzleFlash;
     [SerializeField] private GameObject _blasterBolt;
     [SerializeField] private Animator _animator;
 
     [Header("Behaviour Configuration")]
+    [Tooltip("Speed the enemy moves")]
+    [SerializeField] private float _speed;
+
+    [Tooltip("The distance at which the player is considered close to the enemy")]
     [SerializeField] private float _closeRange;
+    
+    [Tooltip("How far the enemy can see the player")]
     [SerializeField] private float _sightDistance;
 
+    [Tooltip("The range at which an enemy can \"hear\" a player shooting")]
+    [SerializeField] private float _hearDistance;
+
+    [Tooltip("Does not attack player?")]
+    public bool passive;
+
+    [Tooltip("How long the AI will follow after initially detecting player")] 
+    [SerializeField] private float _memoryLength;
+
+    [Tooltip("Mask that will be used for shots that miss")]
+    [SerializeField] private LayerMask _missingMask;
+
     [Header("Patrol Configuration")]
+
+    [Tooltip("Should this enemy patrol random locations around it?")]
     [SerializeField] private bool _shouldPatrol = false;
+
+    [Tooltip("Radius for which random locations are determined")]
     [SerializeField] private float _patrolRadius;
 
 
@@ -27,14 +50,29 @@ public class EnemyAI : MonoBehaviour
 
     [Space(5f)]
     [Header("Settings")]
+
+    [Tooltip("Speed at which the enemy fires their weapon")]
     [SerializeField] private float _fireRate;
+
+    [Tooltip("How much damage the enemy does to the player")]
     [SerializeField] private int _damage;
+
+    [Tooltip("The chance of the enemy missing (25 = 25% chance of missing)")]
     [SerializeField][Range(0, 100)] private int _missChance;
+
+    [Tooltip("How wide the bolts should fly should a shot miss")]
+    [SerializeField][Range(0f, 1f)]  private float _missIntensity;
 
     [Space(5f)]
     [Header("Burst")]
+    
+    [Tooltip("Should the enemy fire their weapon in bursts?")]
     [SerializeField] private bool _fireInBursts;
+
+    [Tooltip("How long between each shot being fired in a burst")]
     [SerializeField] private float _burstWait;
+
+    [Tooltip("How many shots to fire in a burst")]
     [SerializeField] private int _burstAmount;
 
     private EnemyHealth _enemyHealth;
@@ -42,19 +80,24 @@ public class EnemyAI : MonoBehaviour
     private EnemySounds _enemySounds;
     private NavMeshAgent _navAgent;
 
-    private bool _aiming = false;
     private bool _moving = false;
-    private bool _playerDetected = false;
+    [SerializeField] private bool _playerDetected = false;
+    private bool _runningMemory = false;
+    private bool _runningHealthMemory = false;
 
     private float _shootTimer = 0f;
+    private int _healthBefore;
 
     private void Awake()
     {
+        _player = Camera.main.transform.parent.parent;
         _navAgent = GetComponent<NavMeshAgent>();
         _enemyHealth = GetComponent<EnemyHealth>();
         _enemSpriteRenderer = GetComponent<EnemySpriteRenderer>();
         _enemySounds = GetComponent<EnemySounds>();
-        // _navAgent.SetDestination(new Vector3(-1.4f, 3.25f, -3.85f));
+        _navAgent.speed = _speed;
+        _healthBefore = _enemyHealth.curHealth;
+
 
         if (_shouldPatrol)
             StartCoroutine(PatrolRoutine());
@@ -63,25 +106,31 @@ public class EnemyAI : MonoBehaviour
     private void Update()
     {
         // PlayerDetected();
-        _playerDetected = PlayerDetected();
+        _playerDetected = PlayerDetected() && !passive;
         _moving = IsMoving();
         _animator.SetBool("Moving", _moving);
         _enemSpriteRenderer.aiming = _playerDetected;
 
         if (_playerDetected)
+        {
             AttackPlayer();
+
+            if (!_runningMemory)
+            {
+                _runningMemory = true;
+                StartCoroutine(MemoryRoutine());
+            }
+        }
         else
             _shootTimer = 0f;
-
-        // Debug.DrawRay(_boltSpawn.position, (_player.position - _boltSpawn.position).normalized + new Vector3(Random.Range(-.5f, .5f), Random.Range(-.5f, .5f), Random.Range(-.5f, .5f)), Color.red, .1f);
     }
 
     private void AttackPlayer()
     {
-        if (IsClose(_closeRange) && !IsMoving())
+        if (IsClose(_closeRange) && !_moving && CanSeePlayer())
         {
             // in range and can shoot
-            if (_shootTimer > _fireRate && CanSeePlayer())
+            if (_shootTimer > _fireRate)
             {
                 if (_fireInBursts)
                     StartCoroutine(BurstRoutine());
@@ -101,38 +150,48 @@ public class EnemyAI : MonoBehaviour
         else
         {
             // move towards player until close enough
-            if (!IsMoving())
+            if (!_moving)
+            {
                 _navAgent.SetDestination(_player.position);
+            }
             else if (IsClose(_closeRange - 3f))
-                _navAgent.ResetPath();
+            {
+                if (IsMoving())
+                {
+                    _navAgent.ResetPath();
+
+                    _shootTimer = _fireRate;
+                }
+            }
         }
     }
 
     private void ShootAtPlayer()
     {
-        _enemySounds.Shoot();
-        _animator.SetTrigger("Shoot");
-        GameObject newBolt = Instantiate(_blasterBolt, _boltSpawn.position, Quaternion.identity);
-        newBolt.transform.LookAt(Camera.main.transform.position, Vector3.up);
-        newBolt.GetComponent<BlasterBolt>().BeginPath(_player.position, 100f);
+        FireShot(_player.position);
     }
 
     private void MissPlayer()
     {
-        string[] layers = { "Player", "Enemy" };
-        const float MISS_OFFSET = .5f;
-
-        Vector3 randomDir = (_player.position - _boltSpawn.position).normalized + new Vector3(Random.Range(-MISS_OFFSET, MISS_OFFSET), Random.Range(-MISS_OFFSET, MISS_OFFSET), Random.Range(-MISS_OFFSET, MISS_OFFSET));
-        bool result = Physics.Raycast(_boltSpawn.position, randomDir, out RaycastHit info, 100f, ~LayerMask.GetMask(layers));
+        Vector3 randomDir = (_player.position - _boltSpawn.position).normalized + new Vector3(Random.Range(-_missIntensity, _missIntensity), Random.Range(-_missIntensity, _missIntensity), Random.Range(-_missIntensity, _missIntensity));
+        bool result = Physics.Raycast(_boltSpawn.position, randomDir, out RaycastHit info, 100f, ~_missingMask);
 
         if (info.collider)
-        {
-            _enemySounds.Shoot();
-            _animator.SetTrigger("Shoot");
-            GameObject newBolt = Instantiate(_blasterBolt, _boltSpawn.position, Quaternion.identity);
-            newBolt.transform.LookAt(info.point, Vector3.up);
-            newBolt.GetComponent<BlasterBolt>().BeginPath(info.point, 100f);
-        }
+            FireShot(info.point);
+    }
+
+    private void FireShot(Vector3 goal)
+    {
+        if (_animator.GetBool("Dead")) 
+            return;
+
+        _enemySounds.Shoot();
+        _animator.SetTrigger("Shoot");
+        StartCoroutine(FlashRoutine());
+
+        GameObject newBolt = Instantiate(_blasterBolt, _boltSpawn.position, Quaternion.identity);
+        newBolt.transform.LookAt(goal, Vector3.up);
+        newBolt.GetComponent<BlasterBolt>().BeginPath(goal, 100f);
     }
 
     private bool GetRandomDestination(Vector3 center, float radius, out Vector3 goal)
@@ -159,7 +218,7 @@ public class EnemyAI : MonoBehaviour
 
     public bool IsMoving() => !Mathf.Approximately(_navAgent.velocity.sqrMagnitude, 0f);
     private bool IsClose(float reqDist) => (_player.position - transform.position).sqrMagnitude <= reqDist * reqDist;
-    private bool CanSeePlayer()
+    public bool CanSeePlayer()
     {
         Vector3 dir = _player.position - transform.position;
         Physics.Raycast(transform.position, dir, out RaycastHit info, _sightDistance, ~LayerMask.GetMask("Enemy"));
@@ -175,25 +234,33 @@ public class EnemyAI : MonoBehaviour
         Vector3 dir = _player.position - transform.position;
 
         // checking if player is close enough
-        bool isClose = IsClose(_closeRange);
+        // bool isClose = IsClose(_closeRange);
 
         // checking if enemy can see player
         bool inSight = CanSeePlayer();
 
         // checking if enemy was damaged
-        bool damaged = _enemyHealth.curHealth != _enemyHealth.maxHealth;
+        bool damaged = _enemyHealth.curHealth != _healthBefore;
+        if (damaged && !_runningHealthMemory)
+            StartCoroutine(HealthMemory());
 
         // checking if player has shot nearby
-        bool shotNear = (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)) && dir.sqrMagnitude <= 700f;
+        bool shotNear = (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)) && dir.sqrMagnitude <= _hearDistance * _hearDistance;
+        
+        /* debug messages
+        Debug.Log($"In side: {inSight}");
+        Debug.Log($"Damaged: {damaged}");
+        Debug.Log($"Shot near: {shotNear}");
+        */
 
-        return inSight || isClose || damaged || shotNear;
+        return inSight || damaged || shotNear;
     }
 
     private IEnumerator PatrolRoutine()
     {
         while (true)
         {
-            if (!_playerDetected)
+            if (!_playerDetected && !_runningMemory)
             {
                 if (GetRandomDestination(transform.position, _patrolRadius, out Vector3 goal))
                     _navAgent.SetDestination(goal);
@@ -213,5 +280,45 @@ public class EnemyAI : MonoBehaviour
                 ShootAtPlayer();
             yield return new WaitForSeconds(_burstWait);
         }
+    }
+
+    private IEnumerator MemoryRoutine()
+    {
+        float memoryTimer = 0f;
+        while (true)
+        {
+            if (!_playerDetected)
+            {
+                if (memoryTimer > _memoryLength)
+                {
+                    _navAgent.ResetPath();
+                    _runningMemory = false;
+                    yield break;
+                }
+                else if (!IsClose(_closeRange - 3f))
+                    _navAgent.SetDestination(_player.position);
+
+                memoryTimer += Time.deltaTime;
+            }
+            else
+                memoryTimer = 0f;
+            
+            yield return new WaitForEndOfFrame();
+        }
+    }
+
+    private IEnumerator HealthMemory()
+    {
+        _runningHealthMemory = true;
+        yield return new WaitForSeconds(_memoryLength);
+        _healthBefore = _enemyHealth.curHealth;
+        _runningHealthMemory = false;
+    }
+
+    private IEnumerator FlashRoutine()
+    {
+        _muzzleFlash.enabled = true;
+        yield return new WaitForSeconds(.05f);
+        _muzzleFlash.enabled = false;
     }
 }

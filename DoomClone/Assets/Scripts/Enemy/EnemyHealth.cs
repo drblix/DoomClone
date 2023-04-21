@@ -30,7 +30,7 @@ public class EnemyHealth : MonoBehaviour
         // setting dead boolean and starting death animation
         // int d = Random.Range(1, 3);
         _dead = true;
-        _animator.SetBool("Dead_1", true);
+        _animator.SetBool("Dead", true);
 
         // disabling collider, broadcasting death message, and starting coroutine
         GetComponentInChildren<BoxCollider>().enabled = false;
@@ -41,7 +41,7 @@ public class EnemyHealth : MonoBehaviour
     private IEnumerator WaitForDeath()
     {
         // waiting for death animation to finish, then disabling animator
-        yield return new WaitForSeconds(_animator.GetCurrentAnimatorStateInfo(0).length + .1f);
+        yield return new WaitForSeconds(2f);
         _animator.enabled = false;
     }
 }

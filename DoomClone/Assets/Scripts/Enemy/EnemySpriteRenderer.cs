@@ -11,6 +11,11 @@ public class EnemySpriteRenderer : MonoBehaviour
 
     private bool _moving = false;
 
+    private void Awake() 
+    {
+        _player = Camera.main.transform.parent.parent;
+    }
+
     // Late update so animator doesn't override idle sprite changes
     private void LateUpdate()
     {
@@ -42,7 +47,7 @@ public class EnemySpriteRenderer : MonoBehaviour
                     break;
             }
         }
-        else if (!_moving && aiming)
+        else if (!_moving && aiming && !_animator.GetCurrentAnimatorStateInfo(0).IsName("Shoot"))
         {
             _spriteRenderer.sprite = _sprites[3];
         }

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7776869759283678374}
   - component: {fileID: 4735138954765198150}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RaycastDetector
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 1204613375802056472}
   - component: {fileID: 1204613375802056479}
   - component: {fileID: 1204613375802056478}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -143,7 +143,7 @@ GameObject:
   - component: {fileID: 3470073973392771846}
   - component: {fileID: 2028271652351957290}
   - component: {fileID: 1353833253845331452}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -284,7 +284,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1204613377175484220}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Head
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -317,7 +317,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4840787054874733663}
   - component: {fileID: 1434482699804969256}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GunSource
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -444,7 +444,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6371609201681841439}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BoltSpawn
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -459,7 +459,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8084536858647320622}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.331, z: 0.274}
+  m_LocalPosition: {x: 0.096, y: 0.416, z: 0.615}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -476,7 +476,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2324296378642336670}
   - component: {fileID: 3708636918740480200}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: StepSource
   m_TagString: Player
   m_Icon: {fileID: 0}

@@ -1,0 +1,896 @@
+fileFormatVersion: 2
+guid: ff8683e199ad72c4a9eca0ce3f28555f
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Imperial_Officer_Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 82
+        width: 28
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b519418827260d40a1129eb4d86ebd2
+      internalID: 320246662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imperial_Officer_Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 82
+        width: 27
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef8a54e5d0e99ba43bb5ab1ece831ba3
+      internalID: -1831272000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imperial_Officer_Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 82
+        width: 26
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15dbf56650a558748928a79e4efeb5c6
+      internalID: -629777084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imperial_Officer_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 82
+        width: 28
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd8617558332fe349be0a7b1cc9be414
+      internalID: -981905963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imperial_Officer_Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 82
+        width: 35
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e12350ab6afca51429842041d745bf87
+      internalID: 1687938551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imperial_Officer_Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 82
+        width: 27
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfbe9d05760ec794c81ce870c63a403c
+      internalID: -1743568888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imperial_Officer_Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 82
+        width: 33
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2545e8a7d884ce94389b44f9a0512d7f
+      internalID: -496707822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imperial_Officer_Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 82
+        width: 24
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05cd0f693cd9e5a4486b2dc429332676
+      internalID: 1367521285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imperial_Officer_Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 82
+        width: 42
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b229ee2877b70fa499210c21176f9eba
+      internalID: 1273901852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imperial_Officer_Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 82
+        width: 23
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ab9d4e6201b2e94aac8b84ce2147e18
+      internalID: 1249558171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imperial_Officer_Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 82
+        width: 46
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35233924878887b49afdb9541b9f6caa
+      internalID: 995738131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imperial_Officer_Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 82
+        width: 21
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c19a6a26ed18c534aa5745e91cb19559
+      internalID: 94824417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imperial_Officer_Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 82
+        width: 35
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c663aa2e57d19c45ab5f18549ec11c6
+      internalID: 1954397897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imperial_Officer_Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 82
+        width: 25
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54ed7bd140ed7b348979dd2d35143f33
+      internalID: 576578134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imperial_Officer_Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 82
+        width: 40
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 538fe00de6165b24ab68ca4bf80119a7
+      internalID: -2094551590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imperial_Officer_Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 82
+        width: 22
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29194503b832dbb488830abe6a71e11d
+      internalID: -1516020985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imperial_Officer_Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 82
+        width: 26
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f768ea04a00d1204097ad5a4ac2f1ac6
+      internalID: -1930222213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imperial_Officer_Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 82
+        width: 26
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ce5119dff652564cb40bc22e7fc2abc
+      internalID: 189982272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imperial_Officer_Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 82
+        width: 25
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 927635506a7de3445b1fbe2232aab818
+      internalID: 109115929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imperial_Officer_Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 82
+        width: 27
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fab5438cdcdfca44d9a2e1aa5a60ec3f
+      internalID: 779422954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imperial_Officer_Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8
+        width: 26
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b72bdc87662a4924087c5e797ad1dd83
+      internalID: 1603626342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imperial_Officer_Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 8
+        width: 26
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 786d6c9913d84b4439fd276d8e7f0010
+      internalID: -2077330091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imperial_Officer_Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 8
+        width: 38
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17e005cbb2e66d2489720143d024cb5a
+      internalID: 839102403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imperial_Officer_Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 3
+        width: 33
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 627b426fd53477441b9196aef80910a8
+      internalID: 1036794977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imperial_Officer_Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 3
+        width: 44
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb97bb07a6215174a9214e3fc6ff6a48
+      internalID: -502688414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imperial_Officer_Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 3
+        width: 47
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1452e3f19f88fce4b8fb6e2af64a6adf
+      internalID: -1198509428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imperial_Officer_Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 3
+        width: 35
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f1253c843c12914d8d689f01564d949
+      internalID: -643535956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imperial_Officer_Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 3
+        width: 29
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74e7f710fae37ef41bd2794bc0ceb8c3
+      internalID: 1867990813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imperial_Officer_Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 3
+        width: 18
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a5ed80584b056f4fa563fe62d911ce2
+      internalID: 391931369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imperial_Officer_Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 3
+        width: 29
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a27e392000b24b24a927f0654e729e66
+      internalID: 1829313860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imperial_Officer_Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 3
+        width: 34
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e5836fefc410bd46a59286fd497a7bb
+      internalID: -1138274783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imperial_Officer_Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 3
+        width: 40
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1a44ffceddabca45ae7a3746144c921
+      internalID: 1378669904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imperial_Officer_Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 3
+        width: 41
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51334b9d733a11944812e593db3bb3cb
+      internalID: 194907487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imperial_Officer_Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 3
+        width: 46
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1684dc30d71461478a8e6beb061f6d0
+      internalID: 1098991211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imperial_Officer_Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 3
+        width: 52
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39ccefdd6611d594e9fdd29a1f18fc8e
+      internalID: 626998550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: f3a26f732a495b540a843d14734ef1fc
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Imperial_Officer_Sheet_27: 1760742926
+      Imperial_Officer_Sheet_37: 626998550
+      Imperial_Officer_Sheet_28: -643535956
+      Imperial_Officer_Sheet_18: 109115929
+      Imperial_Officer_Sheet_0: 320246662
+      Imperial_Officer_Sheet_21: -2077330091
+      Imperial_Officer_Sheet_25: -1198509428
+      Imperial_Officer_Sheet_30: 391931369
+      Imperial_Officer_Sheet_36: -1911268674
+      Imperial_Officer_Sheet_12: 1954397897
+      Imperial_Officer_Sheet_23: 1036794977
+      Imperial_Officer_Sheet_10: 995738131
+      Imperial_Officer_Sheet_26: -931974001
+      Imperial_Officer_Sheet_32: -1138274783
+      Imperial_Officer_Sheet_20: 1603626342
+      Imperial_Officer_Sheet_35: 1098991211
+      Imperial_Officer_Sheet_19: 779422954
+      Imperial_Officer_Sheet_6: -496707822
+      Imperial_Officer_Sheet_29: 1867990813
+      Imperial_Officer_Sheet_13: 576578134
+      Imperial_Officer_Sheet_2: -629777084
+      Imperial_Officer_Sheet_3: -981905963
+      Imperial_Officer_Sheet_4: 1687938551
+      Imperial_Officer_Sheet_31: 1829313860
+      Imperial_Officer_Sheet_24: -502688414
+      Imperial_Officer_Sheet_1: -1831272000
+      Imperial_Officer_Sheet_34: 194907487
+      Imperial_Officer_Sheet_8: 1273901852
+      Imperial_Officer_Sheet_17: 189982272
+      Imperial_Officer_Sheet_33: 1378669904
+      Imperial_Officer_Sheet_5: -1743568888
+      Imperial_Officer_Sheet_7: 1367521285
+      Imperial_Officer_Sheet_15: -1516020985
+      Imperial_Officer_Sheet_9: 1249558171
+      Imperial_Officer_Sheet_11: 94824417
+      Imperial_Officer_Sheet_16: -1930222213
+      Imperial_Officer_Sheet_22: 839102403
+      Imperial_Officer_Sheet_14: -2094551590
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
