@@ -212,6 +212,8 @@ public class EnemyAI : MonoBehaviour
 
     private void DisableEnemy_Broadcast()
     {
+        StopAllCoroutines();
+        _muzzleFlash.enabled = false;
         _navAgent.enabled = false;
         this.enabled = false;
     }

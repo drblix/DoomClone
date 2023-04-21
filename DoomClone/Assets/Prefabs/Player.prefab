@@ -143,6 +143,7 @@ GameObject:
   - component: {fileID: 3470073973392771846}
   - component: {fileID: 2028271652351957290}
   - component: {fileID: 1353833253845331452}
+  - component: {fileID: 4217244189064850579}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -264,9 +265,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7b3c5ed49ba44843b1f0fc2406bc8d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerShoot:
-    m_PersistentCalls:
-      m_Calls: []
   _blasterBolt: {fileID: 1405046784032643753, guid: 8faef1b52d6731f4bb34d0bb7dbb0c8f, type: 3}
   playerWeapons:
   - {fileID: 11400000, guid: d5d9d522ab7776e468c0ad1442a57022, type: 2}
@@ -275,6 +273,25 @@ MonoBehaviour:
   _gunSource: {fileID: 1434482699804969256}
   _gunAnimator: {fileID: 0}
   _gunSprite: {fileID: 0}
+--- !u!114 &4217244189064850579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204613376250500880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc4b3dcb1f507584f96597d9f1bd14ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerWeapons:
+  - {fileID: 11400000, guid: d5d9d522ab7776e468c0ad1442a57022, type: 2}
+  - {fileID: 11400000, guid: 1a173330c2b79474abfa426e8e3e7639, type: 2}
+  _gunSprite: {fileID: 0}
+  _swapDestination: {x: 226, y: -769, z: 0}
+  _defaultDestination: {x: 226, y: -355, z: 0}
+  _changeSpeed: 1500
 --- !u!1 &1204613377175484195
 GameObject:
   m_ObjectHideFlags: 0

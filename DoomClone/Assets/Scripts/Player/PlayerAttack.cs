@@ -4,11 +4,9 @@ using UnityEngine.Events;
 
 public class PlayerAttack : MonoBehaviour
 {
-    [HideInInspector] public UnityEvent playerShoot;
     [SerializeField] private GameObject _blasterBolt;
 
-
-    public List<WeaponObject> playerWeapons;
+    private PlayerInventory _playerInventory;
     private WeaponObject _currentWeapon;
     
     [SerializeField] private Transform _boltSpawn;
@@ -18,33 +16,32 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private Animator _gunAnimator;
     [SerializeField] private UnityEngine.UI.Image _gunSprite;
 
-    private float _fireRate;
     private float _fireTimer = 0f;
+    public bool canShoot { get; set; } = true;
 
     private void Awake() 
     {
-        _currentWeapon = playerWeapons[0];
-        foreach (WeaponObject obj in playerWeapons)
-            obj.ammo = obj.maxAmmo;
-
-        SelectWeapon(0);
+        _playerInventory = GetComponent<PlayerInventory>();
+        _currentWeapon = _playerInventory.playerWeapons[0];
     }
 
     private void Update()
     {
+        if (!canShoot)
+            return;
+
         if (_currentWeapon.fullAuto)
         {
-            if (Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0) && _fireTimer > _fireRate)
+            if (Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0) && _fireTimer > _currentWeapon.fireRate)
                 Shoot();
         }
         else
         {
-            if ((Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) && _fireTimer > _fireRate)
+            if ((Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) && _fireTimer > _currentWeapon.fireRate)
                 Shoot();
         }
 
-        ChangeWeaponInput();
-        _fireTimer = _fireTimer <= _fireRate ? _fireTimer + Time.deltaTime : _fireTimer;
+        _fireTimer = _fireTimer <= _currentWeapon.fireRate ? _fireTimer + Time.deltaTime : _fireTimer;
     }
 
     private void Shoot()
@@ -75,36 +72,15 @@ public class PlayerAttack : MonoBehaviour
 
     }
 
-    private void ChangeWeaponInput()
+    public void SelectWeapon(WeaponObject weapon)
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            int index = 0;
-
-            if (Input.GetKeyDown(KeyCode.Alpha1))
-            {
-                index = 0;
-            }
-            else if (Input.GetKeyDown(KeyCode.Alpha2))
-            {
-                index = 1;
-            }
-
-            if (index < playerWeapons.Count)
-                SelectWeapon(index);
-        }
-    }
-
-    private void SelectWeapon(int index)
-    {
-        // add swapping animation later
-        WeaponObject weapon = playerWeapons[index];
         _currentWeapon = weapon;
         _gunAnimator.enabled = false;
+
         _gunAnimator.runtimeAnimatorController = weapon.animations;
         _gunSprite.sprite = weapon.idle;
-        _fireRate = weapon.fireRate;
-        _fireTimer = _fireRate;
+        _fireTimer = weapon.fireRate;
+
         _gunAnimator.enabled = true;
     }
 }
