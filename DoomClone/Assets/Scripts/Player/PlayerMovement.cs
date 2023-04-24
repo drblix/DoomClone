@@ -4,6 +4,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private CharacterController _characterController;
+    private Vector3 _userInputVector;
 
     [SerializeField] private float _movementSpeed = 10f;
     [SerializeField] private float _gravityStrength = 20f;
@@ -47,6 +48,7 @@ public class PlayerMovement : MonoBehaviour
 
         // Create a movement vector based on the input
         Vector3 movementVector = transform.TransformDirection(new Vector3(horizontal, 0f, vertical).normalized);
+        _userInputVector = movementVector;
 
         // Scale the movement vector by the movement speed and time elapsed since the last frame
         movementVector *= _movementSpeed * Time.deltaTime;
@@ -71,7 +73,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // Check if the player is currently moving
-    public bool IsMoving() => _characterController.velocity.sqrMagnitude > 1f;
+    public bool IsMoving() => _userInputVector.sqrMagnitude > .1f;
     public bool IsGrounded() => Physics.Raycast(transform.position, Vector3.down, _rayDistance);
 
     public static Facing GetFacing(Transform playerTrans, Transform otherTrans)

@@ -15,7 +15,7 @@ MonoBehaviour:
   animations: {fileID: 9100000, guid: 0b1a0480dcc603f4891bc31cda926e91, type: 2}
   idle: {fileID: -1093609161, guid: fb770f20e0020b143a2e9786dadc3cc3, type: 3}
   sound: {fileID: 8300000, guid: 52b3bcf00cfa72a488187557394d7881, type: 3}
-  fireRate: 0.15
+  fireRate: 0.23
   fullAuto: 1
   maxAmmo: 150
   ammo: 150

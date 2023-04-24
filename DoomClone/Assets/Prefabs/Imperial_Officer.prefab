@@ -140,7 +140,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: bc9f073c5b8836a48a14e912a48ae990, type: 3}
   - {fileID: 8300000, guid: ba7f4178e5a0a3545914f893c077f058, type: 3}
   - {fileID: 8300000, guid: 844c07d088e66554787f2c4a04a50fd0, type: 3}
-  _shootClip: {fileID: 8300000, guid: 82b9c9818bc41ab4fafd93654b4ef2f2, type: 3}
+  _shootClip: {fileID: 8300000, guid: 4f52e2d09e44ed442864516beaa97090, type: 3}
   _enemySource: {fileID: 1020724062450871853}
   _stepSource: {fileID: 1020724061639084753}
   _blasterSource: {fileID: 1020724062034183617}

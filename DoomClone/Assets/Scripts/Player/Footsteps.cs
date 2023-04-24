@@ -51,7 +51,7 @@ public class Footsteps : MonoBehaviour
                 _stepClock = _stepTimer;
         }
 
-        if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit info, 5f))
+        if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit info, 2f))
         {
             if (info.collider)
             {

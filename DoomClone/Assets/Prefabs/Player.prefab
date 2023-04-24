@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7776869759283678374}
   - component: {fileID: 4735138954765198150}
   m_Layer: 7
-  m_Name: RaycastDetector
+  m_Name: CollisonDetectors
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -168,6 +168,7 @@ Transform:
   - {fileID: 4840787054874733663}
   - {fileID: 6371609201681841439}
   - {fileID: 7776869759283678374}
+  - {fileID: 769864044401885810}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -266,8 +267,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _blasterBolt: {fileID: 1405046784032643753, guid: 8faef1b52d6731f4bb34d0bb7dbb0c8f, type: 3}
-  playerWeapons:
-  - {fileID: 11400000, guid: d5d9d522ab7776e468c0ad1442a57022, type: 2}
   _boltSpawn: {fileID: 6371609201681841439}
   _mainCam: {fileID: 1204613375802056472}
   _gunSource: {fileID: 1434482699804969256}
@@ -611,3 +610,48 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &9020424037199215014
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 769864044401885810}
+  - component: {fileID: 8147406288836123415}
+  m_Layer: 7
+  m_Name: ElevatorDetector
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &769864044401885810
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9020424037199215014}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1204613376250501100}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8147406288836123415
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9020424037199215014}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.25, y: 0.25, z: 0.25}
+  m_Center: {x: 0, y: 0, z: 0}

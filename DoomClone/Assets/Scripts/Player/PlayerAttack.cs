@@ -1,6 +1,5 @@
-using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class PlayerAttack : MonoBehaviour
 {
@@ -32,7 +31,7 @@ public class PlayerAttack : MonoBehaviour
 
         if (_currentWeapon.fullAuto)
         {
-            if (Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0) && _fireTimer > _currentWeapon.fireRate)
+            if ((Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0)) && _fireTimer > _currentWeapon.fireRate)
                 Shoot();
         }
         else
@@ -72,14 +71,17 @@ public class PlayerAttack : MonoBehaviour
 
     }
 
-    public void SelectWeapon(WeaponObject weapon)
+    public IEnumerator SelectWeapon(WeaponObject weapon)
     {
         _currentWeapon = weapon;
         _gunAnimator.enabled = false;
 
-        _gunAnimator.runtimeAnimatorController = weapon.animations;
+        _gunAnimator.runtimeAnimatorController = (RuntimeAnimatorController)weapon.animations;
         _gunSprite.sprite = weapon.idle;
         _fireTimer = weapon.fireRate;
+
+        // frame pause allows the swap of the animation controller
+        yield return new WaitForEndOfFrame();
 
         _gunAnimator.enabled = true;
     }

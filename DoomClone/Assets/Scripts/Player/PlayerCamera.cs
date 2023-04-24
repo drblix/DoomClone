@@ -5,6 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerCamera : MonoBehaviour
 {   
+    public bool doHeadBob { get; set; } = true;
+
     private PlayerMovement _playerMovement;
     private CharacterController _characterController;
 
@@ -35,7 +37,8 @@ public class PlayerCamera : MonoBehaviour
     private void Update() 
     {
         PlayerRotation();
-        HeadBob();
+        if (doHeadBob)
+            HeadBob();
         HeadTilt();
     }
     

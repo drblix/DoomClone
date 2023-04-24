@@ -52,29 +52,31 @@ public class PlayerInventory : MonoBehaviour
     private IEnumerator SwapToWeapon(int index)
     {
         const float DIST_THRESHOLD = 25f;
+        RectTransform rect = _gunSprite.rectTransform;
+
         _gunBob.enabled = false;
         _gunSprite.GetComponent<AudioSource>().Play();
 
-        float distance = (_swapDestination - _gunSprite.rectTransform.localPosition).sqrMagnitude;
+        float distance = (_swapDestination - rect.localPosition).sqrMagnitude;
 
         while (distance > DIST_THRESHOLD)
         {
-            _gunSprite.rectTransform.localPosition = Vector3.MoveTowards(_gunSprite.rectTransform.localPosition, _swapDestination, Time.deltaTime * _changeSpeed);
+            rect.localPosition = Vector3.MoveTowards(rect.localPosition, _swapDestination, Time.deltaTime * _changeSpeed);
 
-            distance = (_swapDestination - _gunSprite.rectTransform.localPosition).sqrMagnitude;
+            distance = (_swapDestination - rect.localPosition).sqrMagnitude;
             yield return new WaitForEndOfFrame();
         }
 
         // perform visual changes here
-        _playerAttack.SelectWeapon(_currentWeapon);
+        StartCoroutine(_playerAttack.SelectWeapon(_currentWeapon));
 
-        distance = (_defaultDestination - _gunSprite.rectTransform.localPosition).sqrMagnitude;
+        distance = (_defaultDestination - rect.localPosition).sqrMagnitude;
 
         while (distance > DIST_THRESHOLD)
         {
-            _gunSprite.rectTransform.localPosition = Vector3.MoveTowards(_gunSprite.rectTransform.localPosition, _defaultDestination, Time.deltaTime * _changeSpeed);
+            rect.localPosition = Vector3.MoveTowards(rect.localPosition, _defaultDestination, Time.deltaTime * _changeSpeed);
 
-            distance = (_defaultDestination - _gunSprite.rectTransform.localPosition).sqrMagnitude;
+            distance = (_defaultDestination - rect.localPosition).sqrMagnitude;
             yield return new WaitForEndOfFrame();
         }
 
