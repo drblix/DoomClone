@@ -105,7 +105,6 @@ public class EnemyAI : MonoBehaviour
 
     private void Update()
     {
-        // PlayerDetected();
         _playerDetected = PlayerDetected() && !passive;
         _moving = IsMoving();
         _animator.SetBool("Moving", _moving);
@@ -297,7 +296,8 @@ public class EnemyAI : MonoBehaviour
                     _runningMemory = false;
                     yield break;
                 }
-                else if (!IsClose(_closeRange - 3f))
+                // will seek out player if not close or if can't see the player
+                else if (!IsClose(_closeRange - 3f) || !CanSeePlayer())
                     _navAgent.SetDestination(_player.position);
 
                 memoryTimer += Time.deltaTime;
