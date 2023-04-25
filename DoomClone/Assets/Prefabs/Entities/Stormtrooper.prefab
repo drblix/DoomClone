@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animator: {fileID: 1020724061948442182}
-  _maxHealth: 5
+  _maxHealth: 6
 --- !u!114 &1020724060587393828
 MonoBehaviour:
   m_ObjectHideFlags: 0
