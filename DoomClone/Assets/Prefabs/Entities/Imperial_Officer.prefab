@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1020724060587393828}
   - component: {fileID: 1020724060587393835}
   m_Layer: 6
-  m_Name: Stormtrooper
+  m_Name: Imperial_Officer
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61,20 +61,20 @@ MonoBehaviour:
   _closeRange: 17
   _sightDistance: 25
   _hearDistance: 30
-  _passive: 0
+  passive: 0
   _memoryLength: 5
   _missingMask:
     serializedVersion: 2
     m_Bits: 192
   _shouldPatrol: 1
   _patrolRadius: 10
-  _fireRate: 2.5
+  _fireRate: 1.25
   _damage: 0
-  _missChance: 20
-  _missIntensity: 0.17
-  _fireInBursts: 1
-  _burstWait: 0.15
-  _burstAmount: 3
+  _missChance: 25
+  _missIntensity: 0.2
+  _fireInBursts: 0
+  _burstWait: 0
+  _burstAmount: 0
   _playerDetected: 0
 --- !u!114 &1020724060587393833
 MonoBehaviour:
@@ -92,10 +92,10 @@ MonoBehaviour:
   _spriteRenderer: {fileID: 1020724061948442187}
   _animator: {fileID: 1020724061948442182}
   _sprites:
-  - {fileID: -965386015, guid: dcfec44491c76fc4a8d230a5fb10e5c7, type: 3}
-  - {fileID: -1028754674, guid: dcfec44491c76fc4a8d230a5fb10e5c7, type: 3}
-  - {fileID: -112338369, guid: dcfec44491c76fc4a8d230a5fb10e5c7, type: 3}
-  - {fileID: -1242838459, guid: dcfec44491c76fc4a8d230a5fb10e5c7, type: 3}
+  - {fileID: -643535956, guid: ff8683e199ad72c4a9eca0ce3f28555f, type: 3}
+  - {fileID: -1138274783, guid: ff8683e199ad72c4a9eca0ce3f28555f, type: 3}
+  - {fileID: 391931369, guid: ff8683e199ad72c4a9eca0ce3f28555f, type: 3}
+  - {fileID: 1603626342, guid: ff8683e199ad72c4a9eca0ce3f28555f, type: 3}
 --- !u!114 &1020724060587393832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animator: {fileID: 1020724061948442182}
-  _maxHealth: 5
+  _maxHealth: 3
 --- !u!114 &1020724060587393828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,11 +140,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: bc9f073c5b8836a48a14e912a48ae990, type: 3}
   - {fileID: 8300000, guid: ba7f4178e5a0a3545914f893c077f058, type: 3}
   - {fileID: 8300000, guid: 844c07d088e66554787f2c4a04a50fd0, type: 3}
-  _shootClip: {fileID: 8300000, guid: 52b3bcf00cfa72a488187557394d7881, type: 3}
+  _shootClip: {fileID: 8300000, guid: 4f52e2d09e44ed442864516beaa97090, type: 3}
   _enemySource: {fileID: 1020724062450871853}
   _stepSource: {fileID: 1020724061639084753}
   _blasterSource: {fileID: 1020724062034183617}
   _stepWait: 0.35
+  _voiceLineWait: 10
 --- !u!195 &1020724060587393835
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -328,6 +329,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1020724062575033674}
+  - {fileID: 5126884700770154046}
   m_Father: {fileID: 1020724060587393838}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -372,7 +374,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1242838459, guid: dcfec44491c76fc4a8d230a5fb10e5c7, type: 3}
+  m_Sprite: {fileID: 1603626342, guid: ff8683e199ad72c4a9eca0ce3f28555f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -393,7 +395,7 @@ Animator:
   m_GameObject: {fileID: 1020724061948442185}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: cec031a1265a62844a4e65d1ef3577ee, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5a6361df46a432e44b66df9d3a98bc35, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -696,7 +698,7 @@ GameObject:
   - component: {fileID: 1020724062575033675}
   m_Layer: 6
   m_Name: BoltSpawn
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -709,7 +711,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1020724062575033673}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0.031714283, y: 0.05971428, z: -0.01}
+  m_LocalPosition: {x: -0.036, y: 0.249, z: -0.01}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -768,3 +770,48 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &8887374270773691082
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5126884700770154046}
+  - component: {fileID: 3981130205046381051}
+  m_Layer: 6
+  m_Name: Trigger
+  m_TagString: Enemy
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5126884700770154046
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8887374270773691082}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1020724061948442186}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &3981130205046381051
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8887374270773691082}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.28, y: 0.66999996, z: 0.05}
+  m_Center: {x: 0, y: 0, z: 0}

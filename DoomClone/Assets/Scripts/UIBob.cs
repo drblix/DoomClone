@@ -13,13 +13,12 @@ public class UIBob : MonoBehaviour
     [SerializeField] private float _bobFrequency = 1f;
     [SerializeField] private float _bobSmoothing = 4f;
 
-    private Vector3 _startingPos;
+    [SerializeField] private Vector3 _startingPos;
 
     private void Awake() 
     {
         _rect = GetComponent<RectTransform>();
         _playerMovement = FindObjectOfType<PlayerMovement>();
-        _startingPos = _rect.localPosition;
     }
 
 
@@ -45,6 +44,9 @@ public class UIBob : MonoBehaviour
             goalPos = _startingPos;
         }
 
+
+        //Debug.Log(goalPos);
+        //Debug.Log(_rect.localPosition);
         _rect.localPosition = Vector3.Lerp(_rect.localPosition, goalPos, _bobSmoothing);
     }
 }

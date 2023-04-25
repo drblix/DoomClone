@@ -22,7 +22,7 @@ public class Door : MonoBehaviour
     private IEnumerator ToggleDoor()
     {
         _running = true;
-        _doorOpen = !_doorOpen;
+        _doorOpen = true;
         _doorSource.Play();
 
         while (_doorMesh.localPosition != _openPos)
@@ -40,6 +40,9 @@ public class Door : MonoBehaviour
             _doorMesh.localPosition = Vector3.MoveTowards(_doorMesh.localPosition, _closePos, Time.deltaTime * _speed);
             yield return new WaitForEndOfFrame();
         }
+
+        _doorOpen = false;
+        _running = false;
     }
 
     private void OnTriggerEnter(Collider other) 

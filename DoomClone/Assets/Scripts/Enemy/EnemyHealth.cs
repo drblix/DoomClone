@@ -33,7 +33,8 @@ public class EnemyHealth : MonoBehaviour
         _animator.SetBool("Dead", true);
 
         // disabling collider, broadcasting death message, and starting coroutine
-        GetComponentInChildren<BoxCollider>().enabled = false;
+        foreach (BoxCollider b in GetComponentsInChildren<BoxCollider>())
+            b.enabled = false;
         BroadcastMessage("DisableEnemy_Broadcast");
         StartCoroutine(WaitForDeath());
     }
