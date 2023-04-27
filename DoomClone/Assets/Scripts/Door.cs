@@ -8,6 +8,7 @@ public class Door : MonoBehaviour
     [SerializeField] private Transform _doorMesh;
     [Min(2.5f)] [SerializeField] private float _yIncrease;
     [SerializeField] private float _openTime, _speed;
+    [SerializeField] private bool _locked = false;
 
 
     private Vector3 _closePos, _openPos;
@@ -47,7 +48,7 @@ public class Door : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) 
     {
-        if (other.CompareTag("Player") || other.CompareTag("Enemy"))
+        if ((other.CompareTag("Player") || other.CompareTag("Enemy")) && !_locked)
         {
             _entityIn = true;
             if (!_running)
@@ -60,4 +61,6 @@ public class Door : MonoBehaviour
         if (other.CompareTag("Player") || other.CompareTag("Enemy"))
             _entityIn = false;
     }
+
+    public bool SetLocked(bool s) => _locked = s;
 }
