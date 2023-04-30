@@ -10,6 +10,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _gravityStrength = 20f;
     [SerializeField] private float _rayDistance = 1f;
 
+    [Header("Start Settings")]
+    [SerializeField] private bool _using;
+    [Range(0f, 360f)][SerializeField] private float _startRotation;
+    [SerializeField] private Vector3 _startPosition;
+
     // used if gone out of bounds
     private Vector3 _warpPosition = Vector3.one;
 
@@ -21,10 +26,16 @@ public class PlayerMovement : MonoBehaviour
         Right
     }
 
-    private void Awake() 
+    private void Awake()
     {
         // Get a reference to the CharacterController component attached to the game object
         _characterController = GetComponent<CharacterController>();
+
+        if (_using)
+        {
+            transform.position = _startPosition;
+            transform.rotation = Quaternion.Euler(0f, _startRotation, 0f);
+        }
     }
 
     private void Update()
@@ -33,8 +44,8 @@ public class PlayerMovement : MonoBehaviour
         Movement();
     }
 
-    private void LateUpdate() 
-    {   
+    private void LateUpdate()
+    {
         // warps player back to center if out of map
         if (_warpPosition != Vector3.one)
             transform.position = _warpPosition;
@@ -79,9 +90,9 @@ public class PlayerMovement : MonoBehaviour
     public static Facing GetFacing(Transform playerTrans, Transform otherTrans)
     {
         const float SEGMENT = .45f;
-        
+
         Vector3 direction = otherTrans.InverseTransformPoint(playerTrans.position).normalized;
-        
+
         // .45 to -.45
         if (direction.x > -SEGMENT && direction.x < SEGMENT)
         {

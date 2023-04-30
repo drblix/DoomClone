@@ -5,12 +5,12 @@ public class BillboardSprite : MonoBehaviour
 {
     private SpriteRenderer _spriteRenderer;
 
-    private void Awake() 
+    private void Awake()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    private void LateUpdate() 
+    private void LateUpdate()
     {
         _spriteRenderer.transform.rotation = Quaternion.Euler(Vector3.up * Camera.main.transform.eulerAngles.y);
     }

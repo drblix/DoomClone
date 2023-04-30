@@ -68,7 +68,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -851,7 +851,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Imperial_Officer_Sheet_27: 1760742926
+      Imperial_Officer_Sheet_15: -1516020985
       Imperial_Officer_Sheet_37: 626998550
       Imperial_Officer_Sheet_28: -643535956
       Imperial_Officer_Sheet_18: 109115929
@@ -883,11 +883,11 @@ TextureImporter:
       Imperial_Officer_Sheet_33: 1378669904
       Imperial_Officer_Sheet_5: -1743568888
       Imperial_Officer_Sheet_7: 1367521285
-      Imperial_Officer_Sheet_15: -1516020985
+      Imperial_Officer_Sheet_27: 1760742926
       Imperial_Officer_Sheet_9: 1249558171
-      Imperial_Officer_Sheet_11: 94824417
       Imperial_Officer_Sheet_16: -1930222213
       Imperial_Officer_Sheet_22: 839102403
+      Imperial_Officer_Sheet_11: 94824417
       Imperial_Officer_Sheet_14: -2094551590
   spritePackingTag: 
   pSDRemoveMatte: 0
